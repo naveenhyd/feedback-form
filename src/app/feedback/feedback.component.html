@@ -1,0 +1,19 @@
+<h2>Feedback/Contact:</h2>
+<form [formGroup]="feedbackForm">
+  <p>Full Name*:</p>
+  <input formControlName="fullname" type="text" name="fullname" id="fullname" />
+  <span class="error" *ngIf="feedbackForm.get('fullname').invalid && feedbackForm.get('fullname').touched">Username is required</span>
+  <p>Email*:</p>
+  <input formControlName="email" type="email" name="email" id="email" />
+  <span class="error" *ngIf="feedbackForm.get('email').invalid && feedbackForm.get('email').touched">Email is required</span>
+  <p>Phone Number:</p>
+  <input formControlName="phone" type="number" name="phone" id="phone" />
+  <p>Your Message:</p>
+  <textarea formControlName="message" name="message" id="message" cols="30" rows="6"></textarea>
+  <p>
+    <input type="submit" value="Submit" (click)="onSubmit()" />
+  </p>
+  {{feedbackForm.value | json}}
+  <!-- {{feedbackForm.get('fullname').invalid}}
+  {{feedbackForm.get('fullname').touched}} -->
+</form>

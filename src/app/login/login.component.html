@@ -1,0 +1,21 @@
+<div class="content">
+  <div class="login">
+    <h2>Login</h2>
+
+    <form [formGroup]="loginForm">
+      <label>
+        Username:
+        <input formControlName="username" type="text" name="username" />
+      </label>
+
+      <div>
+        <input
+          type="submit"
+          value="Login"
+          class="login-btn"
+          (click)="onSubmit()"
+        />
+      </div>
+    </form>
+  </div>
+</div>
