@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { UserService } from '../_services/user.service';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -8,11 +7,11 @@ import { UserService } from '../_services/user.service';
 })
 export class HeaderComponent implements OnInit {
 
-  logginUser;
-  constructor(private user: UserService) { }
+  @Input('username') user: string;
+  constructor() { }
 
   ngOnInit(): void {
-    this.logginUser = this.user.getUser();
+
   }
 
 }

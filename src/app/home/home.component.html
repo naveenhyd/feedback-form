@@ -1,11 +1,11 @@
 <div class="content">
-  <app-header></app-header>
+  <app-header [username]="logginUser"></app-header>
   <main>
     <div class="sidebar">
-      <app-headline></app-headline>
+      <app-headline [username]="logginUser"></app-headline>
     </div>
     <div class="form">
-      <app-feedback></app-feedback>
+      <app-feedback [username]="logginUser"></app-feedback>
     </div>
   </main>
 

@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 .content {
-  max-width: 1366px;
+  max-width: 96%;
   margin: auto;
 }
 
@@ -27,8 +27,11 @@ main {
 
   .headline {
     background-color: grey;
-    width: 300px;
-    height: auto;
+    width: 20rem;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .form {
@@ -48,15 +51,12 @@ footer {
   border: 1px solid grey;
   padding: 20px 40px;
   .lang {
+    text-align: center;
     li {
-      display: inline;
+      display: inline-block;
       padding: 0px 10px;
     }
   }
-}
-
-footer {
-  border: 1px solid grey;
 }
 
 .login {
@@ -73,4 +73,16 @@ footer {
     margin-top: 50px;
     width: 100px;
   }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
 }

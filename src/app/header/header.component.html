@@ -2,12 +2,12 @@
   <h1>My Page Title</h1>
   <nav>
     <ul class="menu">
-      <li *ngIf="logginUser == 'a' || logginUser == 'c' "><a href="#">MyLink1 {{logginUser}}</a></li>
-      <li *ngIf="logginUser == 'a' || logginUser == 'b' || logginUser == 'c' "><a href="#">MyLink2</a></li>
-      <li *ngIf="logginUser == 'b' || logginUser == 'c' "><a href="#">MyLink3</a></li>
-      <li *ngIf="logginUser == 'b' || logginUser == 'c' "><a href="#">MyLink4</a></li>
+      <li *ngIf="user == 'a' || user == 'c' || user=='admin' "><a href="#">MyLink1</a></li>
+      <li *ngIf="user == 'a' || user == 'b' || user == 'c' || user=='admin' "><a href="#">MyLink2</a></li>
+      <li *ngIf="user == 'b' || user == 'c' || user=='admin' "><a href="#">MyLink3</a></li>
+      <li *ngIf="user == 'b' || user == 'c' || user=='admin' "><a href="#">MyLink4</a></li>
 
     </ul>
   </nav>
-  {{logginUser}}
+  <!-- {{user}} -->
 </header>

@@ -1,5 +1,5 @@
 <h2>Feedback/Contact:</h2>
-<form [formGroup]="feedbackForm">
+<form [formGroup]="feedbackForm" *ngIf="showMessage == false">
   <p>Full Name*:</p>
   <input formControlName="fullname" type="text" name="fullname" id="fullname" />
   <span class="error" *ngIf="feedbackForm.get('fullname').invalid && feedbackForm.get('fullname').touched">Username is required</span>
@@ -13,7 +13,9 @@
   <p>
     <input type="submit" value="Submit" (click)="onSubmit()" />
   </p>
-  {{feedbackForm.value | json}}
+  <!-- {{feedbackForm.value | json}} -->
   <!-- {{feedbackForm.get('fullname').invalid}}
   {{feedbackForm.get('fullname').touched}} -->
 </form>
+
+<h3 *ngIf="showMessage == true">Thank You {{user}} for your feedback</h3>

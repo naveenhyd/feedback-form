@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
@@ -9,7 +9,8 @@ import { FormBuilder, Validators } from '@angular/forms';
 export class FeedbackComponent implements OnInit {
 
 	feedbackForm;
-
+	showMessage = false;
+	@Input('username') user:string;
 	constructor(private fb: FormBuilder) { }
 
 	ngOnInit(): void {
@@ -22,7 +23,8 @@ export class FeedbackComponent implements OnInit {
 	}
 
 	onSubmit() {
-		console.log('form submitted')
+		console.log('form submitted');
+		this.showMessage = true;
 	}
 
 }
